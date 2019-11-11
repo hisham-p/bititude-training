@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    ul {
+        align-items: center;
+    }
+</style>
+
+<body>
+    <form>
+        <input type="text" class="input">
+        <!-- <button class="add">Add</button> -->
+        <input type="button" value="Add" class="add">
+
+
+        <ol>
+        </ol>
+    </form>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+</script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        $(".add").click(function () {
+            let count = Number($("li").length);
+            let value = $(".input").val();
+            $("ol").append("<li id='" + count + "'>" + value + "</li><button id='" + count + "' class='remove'>Delete</button>");
+            count++;
+        });
+        $("form").on('click', '.remove', function () {
+            // document.write("hai");
+            var id = this.id;
+            var num = Number(id);
+            // var split_id = id.split("_");
+            // var deleteindex = split_id[1];
+
+alert($("#"+num+""))
+            
+            // $().remove();
+        });
+
+
+    });
+</script>
+
+</html>

@@ -1,0 +1,27 @@
+<ul>
+    <p>This session includes....</p>
+    <li>HTTP methods such as <b>GET</b> , 
+    <b>POST</b> , 
+    <b>PUT | PATCH</b> , 
+    <b>DELETE</b></li>
+    <li>Here the component used is <b>http-post</b>(details of methods are commented in the code)</li>
+    <li>Used a fake server for data manipulation(<b>URL :: 'http://jsonplaceholder.typicode.com/posts'</b> )</li>
+</ul>
+
+<input (keyup.enter)="createPost(title)" #title type="text" class="form-control">
+<ul class="list-group">
+
+    <!-- For Updating -->
+    <!-- <li *ngFor="let post of posts" class="list-group-item">
+        <button
+        (click)="updatePost(post)"
+        class="btn btn-default btn-sm">update</button> 
+        {{post.title}}
+    </li> -->
+
+    <!-- for Deleting -->
+    <li *ngFor="let post of posts" class="list-group-item">
+        <button (click)="deletePost(post)" class="btn btn-default btn-sm">delete</button>
+        {{post.title}}
+    </li>
+</ul>

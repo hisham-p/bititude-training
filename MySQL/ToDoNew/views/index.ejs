@@ -1,0 +1,19 @@
+<% include header%>
+
+<body>
+    <div class="container d-flex flex-column">
+        <h1 class="text-center" style="font-size :4rem">todos</h1>
+        <button class="btn add" tabindex="1 "><img src="plus.svg" alt="button" class="imgadd"></button>
+        <p></p>
+        <ol class="list-group">
+            <%db.forEach(function(tasks){%>
+            <li class="list-group-item d-flex flex-row justify-content-between" id="<%= tasks.id%>">
+               <input type="checkbox" name="checkbox" id="<%= tasks.id%>" class="check">
+                <input type="text" value="<%=tasks.task%>" class="inputvalue" id="<%= tasks.id%>">
+                <button class="delete" id="<%=tasks.id%>"><img src="delete.svg" alt="button" class="imgdelete"></button>
+            </li>
+            <%})%>
+        </ol>
+    </div>
+</body>
+<%include footer%>

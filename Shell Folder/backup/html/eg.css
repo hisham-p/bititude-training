@@ -1,0 +1,32 @@
+h1
+{	max-width: 25%;
+	max-height: 5%;
+	color: blue;
+	background-color: #7c795d;
+	border : 2px solid black;
+
+	
+}
+
+h2
+{	
+	color: red;
+	background-image: url("/home/bt022/Downloads/black.jpg");
+	max-width: 25%;
+	max-height: 5%;
+	/*background-repeat: repeat-x , repeat-y;*/
+	text-decoration: underline;
+	border-width : 10px;
+	border-color : black;
+	border-style : solid;
+} 
+h3 , h4
+{	max-width: 25%;
+	color: red;
+	background-image: url("/home/bt022/Downloads/black.jpg");
+}
+h5
+{	font-size : 15pt;
+	text-decoration: underline;
+	font-variant: no-common-ligatures proportional-nums;
+}

@@ -1,0 +1,54 @@
+.main{
+    color: whitesmoke;
+    position: relative;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+    
+
+.navsub-bar{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+    width: 50vw;
+}
+.content{
+    position: absolute;
+    top: 284px;
+    right: 458px;
+    text-align: center;
+}
+.desc{
+    position: absolute;
+    top: 630px;
+    left: 699px;
+
+    display: flex;
+    flex-direction: row;
+}
+.session{
+
+   text-align: center;
+   justify-content: space-between;
+
+}
+    
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+img{
+    width: 54px;
+
+}
+input.b1[type="button"] {
+    border-radius: 18px;
+    width: 176px;
+    height: 40px;
+    background-color: rgb(13, 214, 214);
+    border: none;
+    color: whitesmoke;}

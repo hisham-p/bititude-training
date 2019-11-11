@@ -1,0 +1,12 @@
+// Write a JavaScript function to hide email addresses to protect from unauthorized user. Go to the editor
+// Test Data :
+// console.log(protect_email("robin_singh@example.com"));
+// "robin...@example.com"
+
+function protect_email(input){
+let str = input.split('@');
+str[0] = input.substring(0, 3);
+return str.join('......@');
+
+}
+console.log(protect_email("robin_singh@example.com"));

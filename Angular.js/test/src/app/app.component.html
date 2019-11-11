@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div class="jumbotron">
+        <h1 class="text-center">Welcome to Angular App</h1>
+        <ul>
+                <h5><u>Forms</u></h5>
+                <li> <a [routerLink]="['/array']" routerLinkActive="router-link-active">Form-Array</a>
+                </li>
+        </ul>
+        <ul>
+                <h4><u>HTTP</u></h4>
+                <li><a [routerLink]="['/http']" routerLinkActive="router-link-active" > Http Methods</a></li>
+        </ul>
+</div>
+<main class="container">
+        <router-outlet></router-outlet>
+</main>

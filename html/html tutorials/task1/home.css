@@ -1,0 +1,58 @@
+.navbar {
+    background-color: rgb(81, 82, 82);
+    height: 50px;
+    padding: 10px;
+
+}
+
+nav li {
+    color: whitesmoke;
+    float: left;
+    margin: 0px 20px;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+nav a{
+    text-decoration: none;
+    color: turquoise;
+}
+nav a:hover{
+    background-color: rgb(16, 229, 236);
+    color:whitesmoke;
+}
+table {
+    background-color: rgb(255, 255, 255);
+    padding: 117px 97px;
+    margin-top: 31px;
+    /* margin-left: -101px; */
+    z-index: -1;
+}
+a{
+    padding: 15px;
+    margin: 10px 15px;
+}
+h3{
+    color: whitesmoke;
+}
+h3 a.register{
+    color: whitesmoke;
+    text-decoration: none;
+}
+h3 a.register:hover{
+    color: aqua;
+}
+img{
+    width: 100px;
+    height: 351px;
+    padding: 1px;
+    margin-top: 31px;
+    margin-left: 0px;
+}
+div{
+    margin-left: 145px;
+    display: flex;
+}
+tr{
+    
+}

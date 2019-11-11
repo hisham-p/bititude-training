@@ -1,0 +1,52 @@
+h1 
+{ 
+color: #7c795d; 
+font-family: 'FreeMono', serif;
+ font-size: 45px; 
+font-weight: normal; 
+line-height: 48px; 
+margin: 0; 
+}
+
+
+h2
+{ color: #7c795d;
+ font-family: 'Source Sans Pro', sans-serif;
+ font-size: 28px;
+ font-weight: 400;
+ line-height: 32px;
+ margin: 0 0 24px; 
+}
+
+
+h3 
+{ font-size: 26px; 
+font-weight: 300;
+ color: #ffcc66;
+ margin: 0 0 24px; }
+
+
+h4
+ {
+ color: #4c4a37;
+ font-family: 'Source Sans Pro', sans-serif; 
+font-size: 18px; 
+line-height: 32px; 
+margin: 0 0 24px; 
+}
+
+
+h5 
+{ 
+color: #ff9900;
+ background: #fff4a3;
+ text-decoration: none; }
+
+
+h6
+{ 
+font-size : 12px;
+color: #ffcc66
+ }
+
+

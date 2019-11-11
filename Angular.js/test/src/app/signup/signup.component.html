@@ -1,0 +1,48 @@
+<!-- Section details -->
+<p>In this section....</p>
+<ul>
+    <li>Create controls programatically</li>
+    <li>Add validation</li>
+    <li>Implement custom validation</li>
+    <li>Implement asynchronus validation</li>
+    <li>Build forms that include an array of objects</li>
+    <li>Here the component used is <b>signup</b>(details of methods are commented in the code)</li>
+</ul>
+
+<!-- SignUp form Bootstrap -->  
+<h2 class="text-center">Sign-Up</h2>
+<form [formGroup]="form">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input 
+                formControlName="username"
+                id="username" 
+                type="text"                 
+                class="form-control">
+
+                <!-- Showing a loader image -->
+                <div *ngIf="username.pending">Checking for Uniquness....</div>
+
+
+                <!-- Below div is for validation-->
+                <div *ngIf="username.touched && username.invalid" class="alert alert-danger">
+                    <div *ngIf="!!username.errors.required">Username required</div>
+                    <div *ngIf="!!username.errors.minlength">Username minimum {{username.errors.minlength.requiredLength}} characters</div>
+                    <div *ngIf="!!username.errors.cannotContainSpace">Username cannot contain space</div>
+                   
+                    <!-- Below div is for Asynchronus Validation -->
+                    <div *ngIf="!!username.errors.shouldBeUnique">Username is alredy taken</div>   
+                
+                </div>
+
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input
+                formControlName="password" 
+                id="password" 
+                type="text" 
+                class="form-control">
+        </div>
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+    </form>

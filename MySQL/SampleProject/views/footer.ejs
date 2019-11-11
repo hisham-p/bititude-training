@@ -1,0 +1,26 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        $(".submit").on("click", function (key) {
+            let id = $("#id").val();
+            let name = $("#name").val();
+            let age = $("#age").val();
+                if (name.length === 0) {
+                    alert("Enter a valid name")
+                }
+                else if (age.length === 0) {
+                    alert("Enter a valid age")
+                }
+                else {
+                    $.ajax({
+                        type: "POST",
+                        url: '/submit/' + name + "/" + age,
+                        success: window.location.replace("/")
+
+                    })
+                }
+        })
+    })
+</script>
+
+</html>

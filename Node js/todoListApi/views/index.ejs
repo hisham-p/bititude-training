@@ -1,0 +1,35 @@
+<% include partials/header %>
+<div class="container">
+    <h1 class="text-center py-4">TO-DO-LIST</h1>
+
+    <form action="/addtask" method="POST">
+        <div class="row pb-5" id="row">
+            <div class="col-12 col-lg-10 col-md-10 col-sm-10">
+                <input type="text" name="newtask" class="input w-100 h-100 form-control" id="text"
+                    placeholder="Enter the to-do things here">
+            </div>
+            <div class="col-12 col-lg-2 col-md-2 col-sm-2">
+                <button class="btn btn-primary add w-100"> Add</button>
+            </div>
+        </div>
+        <ol class="list">
+            <% for( var i = 0; i < task.length; i++){ %>
+            <li class="list d-flex flex-row align-items-center">
+                <input type='checkbox' class="btn btn-link checks" name="check">
+                <input type="text" name="inputvalue" id="<%= i%>" class="pl-3 w-100 li" value="<%= task[i] %> ">
+                <button class="btn btn-link" formaction="/updatetask/<%= i%>" type="submit">Edit</button>
+                <button class="btn btn-link remove" formaction="/removetask/<%= i%>" type="submit"> Remove </button>
+            </li>
+            <% } %>
+        </ol>
+        <div>
+            <h2>Completed Tasks</h2>
+            <ul>
+                <% for( var i = 0; i < complete.length; i++){ %>
+                <li><%= complete[i]%></li>
+                <% } %>
+            </ul>
+        </div>
+    </form>
+</div>
+<% include partials/footer %>

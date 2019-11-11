@@ -1,0 +1,36 @@
+<!-- Remove all the options of a select box and then add one option and select it. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+    </select>
+    <button class="add">Add </button>
+    <button class="remove">Remove all</button>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+</script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        $(".add").click(function () {
+            $("select").append("<option>New option</option>");
+        });
+        $(".remove").click(function () {
+                $("option").remove();
+        });
+    });
+</script>
+
+</html>

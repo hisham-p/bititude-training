@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    /* .parent { */
+    /* background-color: bisque; */
+
+
+    /* } */
+
+    div {
+        background-color: floralwhite;
+        padding: 100px;
+        margin: 200px 210px 210px;
+
+    }
+
+
+
+    h1 {
+        font-family: monospace;
+        color: dimgray;
+
+
+    }
+
+    input[type="email"] {
+        width: 300px;
+        height: 40px;
+        font-size: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px rgb(112, 106, 106) solid;
+
+
+    }
+
+    input[type="password"] {
+
+        width: 300px;
+        height: 40px;
+        font-size: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        border: 1px rgb(112, 106, 106) solid;
+
+
+    }
+
+    ::placeholder {
+        font-family: monospace;
+        font-size: 15px;
+        padding:15px;
+    }
+
+    input[type="button"] {
+
+        width: 305px;
+        height: 40px;
+        font-size: 20px;
+        background-color: tomato;
+        color: floralwhite;
+        border-radius: 5px;
+        border: 0ch;
+        margin-bottom: 20px;
+
+    }
+    input.submit:hover{
+        background-color: black;
+        color: tomato;
+        border: 1px white;
+    }
+
+    a {
+        color: dimgray;
+        text-decoration: none;
+    }
+    a:hover{
+        color: aqua;
+    }
+</style>
+
+<body bgcolor="black">
+
+    <div>
+        <table>
+            <tr id="head">
+                <th>
+                    <h1 class="head">Simple Login</h1>
+                </th>
+            </tr>
+            <tr id="email1">
+                <td>
+                    <input type="email" name="email" id="email" placeholder="Email Address"></td>
+            </tr>
+            <tr id="password">
+                <td>
+                    <input type="password" name="pwd" id="pwd" placeholder="Password">
+                </td>
+            </tr>
+            <tr id="button1">
+                <td> <input type="button" id="button" value="Lets Go" class="submit">
+                </td>
+            </tr>
+            <th>
+
+                <a href="https://www.exapmle.com">Forgot Password?</a>
+
+            </th>
+        </table>
+    </div>
+</body>
+
+</html>

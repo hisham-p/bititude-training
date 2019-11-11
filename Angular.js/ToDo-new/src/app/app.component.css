@@ -1,0 +1,18 @@
+::placeholder{
+    text-align: center;
+    font-family: monospace;
+}
+.btn-link{
+    text-decoration: none;
+}
+h1{
+    font-size: 6rem;
+}
+h3{
+    font-family: monospace;
+    font-size: 2rem;
+
+}
+.completed{
+    text-decoration: line-through;
+}

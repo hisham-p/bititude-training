@@ -1,0 +1,36 @@
+<!-- Remove style added with .css() function using jQuery. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .blue {
+        margin: 4px;
+        font-size: 16px;
+        font-weight: bolder;
+        color: blue;
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <p class="blue">Hello and then Goodbye</p>
+    <button id="btn">Click Here to remove underline</button>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+</script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        $("#btn").click(function () {
+            $(".blue").css("text-decoration", "none");
+        })
+    });
+</script>
+
+</html>

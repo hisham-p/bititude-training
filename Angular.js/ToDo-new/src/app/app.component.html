@@ -1,0 +1,17 @@
+<div class="container jumbotron text-center">
+    <div class="pb-3">
+        <h1>{{title}}</h1>
+    </div>
+    <div class="pb-4">
+        <input class="w-100" type="text" #todo (keyup.enter)="onKeyUp(todo.value)" placeholder="enter todo here">
+    </div>
+    <ol class="list-group">
+        <app-items [title]="item"  (remove)="onRemoveName($event)"
+            *ngFor="let item of names"></app-items>
+    </ol>
+    <h3>Completed task</h3>
+    <ul>
+        <app-completed [task]="item"  *ngFor="let item of completed"></app-completed>
+    </ul>
+    <button class="btn btn-link" (click)="clearAll()">Clear all completed tasks</button>
+</div>

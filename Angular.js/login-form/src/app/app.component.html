@@ -1,0 +1,13 @@
+<nav class="navbar navbar-default justify-content-around">
+    <a href="#">Home</a>
+    <a [routerLink]="['/login']" routerLinkActive="router-link-active">Login</a>
+    <a [routerLink]="['/signup']" routerLinkActive="router-link-active">SignUp</a>
+</nav>
+<div class="jumbotron text-center">
+    <h1 class="pb-5">Welcome to Angular app</h1>
+    <!-- <p class="w-100">click <a routerLink='login'>here</a> to login if you are a new User</p>
+    <p>Click <a routerLink='signup'>here</a> to Sign up</p> -->
+</div>
+<main>
+    <router-outlet></router-outlet>
+</main>

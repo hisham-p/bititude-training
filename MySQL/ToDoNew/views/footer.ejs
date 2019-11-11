@@ -1,0 +1,86 @@
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+
+
+        //adding contents
+
+        $(".add").click(function () {
+            $("p").append(" <input type='text' class='input w-100 text-center' placeholder='Enter toDo HerE!' tabindex='2'>");
+            $(".input").on("keydown", function (key) {
+                let value = $(".input").val();
+                if (key.which === 13) {
+                    $.ajax({
+                        type: "POST",
+                        url: '/submit/' + value,
+                        // data : value,
+                        success: function (res) {
+                            let insert = `
+                            <li class="list-group-item d-flex flex-row justify-content-between" id="${res.id}">
+                                <input type="checkbox" name="checkbox" class="check" id="${res.id}">
+                                <input type="text" value="${res.task}" class="inputvalue" id="${res.id}">
+                                <button class='delete' id="${res.id}"><img src="delete.svg" alt='button' class='imgdelete'></button>
+                            </li>`;
+                            $("ol").append(insert);
+                            // window.location.replace("/");
+                        }
+                    })
+                    $(".input").remove();
+                }
+            })
+        });
+
+        // removing a task
+        $(".list-group").on('click', '.delete', function () {
+            console.log('---------------')
+            let id = this.id;
+            $(`li#${id}`).remove();
+            $.ajax({
+                type: "POST",
+                url: '/remove/' + id,
+                success: (res) => {
+                    $(`li#${res.id}`).remove();
+                }
+            })
+        });
+
+        //line strike on value when checked = checked
+
+        $(".check").click(function () {
+            let id = this.id;
+            $(this).attr("checked", "checked");
+            if ($(this).prop('checked') === true) {
+                $(`#${id}.inputvalue`).attr({ style: "text-decoration:line-through", disabled: "disabled" });
+                $(`#${id}.check`).hide();
+            } else {
+                $(`#${id}.inputvalue`).removeAttr("style disabled");
+            }
+        })
+
+        //updating a value
+        $(".inputvalue").on("keydown", function (key) {
+            if (key.which === 13) {
+                let id = this.id;
+                let value = $(this).val();
+                $.ajax({
+                    type: "POST",
+                    url: '/update/' + id + "/" + value
+                })
+            }
+        });
+
+
+
+    })
+</script>
+
+</html>

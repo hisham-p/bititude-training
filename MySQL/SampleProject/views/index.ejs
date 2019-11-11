@@ -1,0 +1,16 @@
+<% include header %>
+<body>
+    <form action="">
+    <!-- <input type="text" id="id" placeholder="enter id here" tabindex="1"><br> -->
+    <input type="text" id="name" name="input" placeholder="enter name here" tabindex="2"><br>
+    <input type="text" id="age" placeholder="age here" tabindex="3"><br>
+    <button type="submit"  class="submit" >submit</button>
+</form>
+<p>No of users : <%=msg%></p>
+<ul>
+    <%task.forEach(function(tasks){%>
+<li>ID #<%=tasks.id%> <br> NAME : <%= tasks.name%> <br> AGE : <%=tasks.age%></li>
+        <%})%>
+</ul>
+</body>
+<% include footer %>

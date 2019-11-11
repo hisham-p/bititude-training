@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p.access,
+        p.head,
+        p.login {
+            color: rgb(61, 60, 58);
+            font-family: monospace;
+            font-size: 16px;
+
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            padding: 1px;
+            margin: 10px 175px;
+            margin-bottom: 0px;
+        }
+
+        .login {
+            background-color: aliceblue;
+            /* padding: 1px; */
+            margin: 10px 200px;
+        }
+
+        input[type="text"] {
+            font-family: monospace;
+            width: 375px;
+            height: 40px;
+            padding: 0px 10px;
+
+        }
+
+        input[type="password"] {
+            font-family: monospace;
+            width: 375px;
+            height: 40px;
+            padding: 0px 10px;
+        }
+
+        input.sign[type="button"] {
+            font-family: monospace;
+            border: 1px solid aqua;
+            background-color: whitesmoke;
+            color: aqua;
+        }
+        input.sign:hover{
+            background-color: black;
+            color: aliceblue;
+        }
+       
+        input.log[type="button"] {
+            background-color: aqua;
+            color: whitesmoke;
+            width: 400px;
+            height: 40px;
+            font-weight: bold;
+
+        }
+        input.log:hover{
+            background-color: black;
+            color: aliceblue;
+        }
+        a {
+            text-decoration: none;
+            color: teal;
+        }
+
+        #signup {
+            margin: 5px 350px;
+            padding: 10px;
+            margin-top: -20px;
+
+        }
+
+        .access {
+            margin: 20px 75px;
+            padding: 50px 0px;
+
+        }
+
+        .head {
+            padding: 1px;
+            margin: 10px 175px;
+        }
+
+        p.fp {
+            align: "center";
+            padding: 10px;
+            color: dimgrey;
+            margin: 0px 80px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body bgcolor="#418dc">
+    <div class="login">
+        <div class="access">
+            <p class="sign"><input type="button" value="SIGNUP" id="signup" class="sign"></p>
+            <img src="../task2/download.png">
+            <p class="head">DRUPAL</p>
+            <p class="uname"><input type="text" name="user" id="user" placeholder="Username"></p>
+            <p class="pass"> <input type="password" name="pwd" class="pwd" placeholder="Password"></p>
+            <p class="submit"> <input type="button" value="LOGIN TO ACCOUNT" id="button" class="log"></p>
+            <p class="fp">Forgot password?<a href="https://www.example.com"> Click here</a></p>
+
+        </div>
+    </div>
+</body>
+
+</html>

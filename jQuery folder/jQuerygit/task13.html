@@ -1,0 +1,26 @@
+<!-- Find the absolute position of an element using jQuery. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<p class="fele">hello</p><p class="sele">hai</p>
+<div></div>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+</script>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        var offset = $(".fele").offset();
+$("div").append("position of hello is left: " + offset.left + ", top: " + offset.top )
+    });
+</script>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testing input types</title>
+</head>
+
+<body>
+    <table align="">
+        <tr>
+            <td>
+                <!-- input colours -->
+                <input type="color" id="new">
+                <label for="new">test</label> </td>
+        </tr>
+        <tr>
+            <td><br>
+                <!-- input a button -->
+                <input type="button" value="submit" alt="submit button">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!-- input a checkbox -->
+                <input type="checkbox" name="checkbox" id="name">
+                <label for="name">checkbox</label>
+            </td>
+        </tr>
+        <!-- date  -->
+        <tr>
+            <td>
+                <label> Date</label>
+                <input type="date" id="date">
+            </td>
+        </tr>
+        <!-- email -->
+        <tr>
+            <td>
+                <label for="email">Enter your globex.com email:</label>
+
+                <input type="email" id="email" pattern=".+@globex.com" size="30" required>
+
+            </td>
+        </tr>
+        <!-- Choose a file -->
+        <tr>
+            <td> Choose a profile pucture :
+                <input type="file" name="browse">
+            </td>
+        </tr>
+        <!-- image -->
+        <tr>
+            <td>
+                <input type="image" src="https://image.flaticon.com/icons/svg/152/152532.svg" width="225" height="100">
+            </td>
+        </tr>
+        <!-- month -->
+        <tr>
+            <td> select the month
+                <input type="month" id="start" name="start">
+            </td>
+        </tr>
+        <!-- number -->
+        <tr>
+            <td>
+                <label for="tentacles">Number of tentacles (10-100):</label>
+
+                <input type="number" id="tentacles" name="tentacles" min="10" max="100">
+            </td>
+        </tr>
+        <!-- radio -->
+        <tr>
+            <td>
+                <p>Select a maintenance drone:</p>
+
+                <div>
+                    <input type="radio" id="huey" name="drone" value="huey" checked>
+                    <label for="huey">Huey</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="dewey" name="drone" value="dewey">
+                    <label for="dewey">Dewey</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="louie" name="drone" value="louie">
+                    <label for="louie">Louie</label>
+                </div>
+
+            </td>
+        </tr>
+        <!-- range  -->
+        <tr>
+            <td>
+                <p>Audio settings:</p>
+
+                <div>
+                    <input type="range" id="start" name="volume" min="0" max="11">
+                    <label for="volume">Volume</label>
+                </div>
+
+                <div>
+                    <input type="range" id="cowbell" name="cowbell" min="0" max="100" value="90" step="10">
+                    <label for="cowbell">Cowbell</label>
+                </div>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="range" list="range">
+                <datalist id="range">
+                    <option value="0" label="0">
+                    <option value="10" label="10">
+                    <option value="20" label="20">
+                    <option value="30" label="30">
+                    <option value="40" label="40">
+                    <option value="50" label="50">
+                    <option value="60" label="60">
+                </datalist>
+            </td>
+        </tr>
+        <!-- reset -->
+        <tr>
+            <td>
+                <form>
+                    <div class="controls">
+
+                        <label for="id">User ID:</label>
+                        <input type="text" id="id" name="id" />
+
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+        </tr>
+        <!-- search -->
+        <tr>
+            <td>
+                <label for="search">input search</label>
+                <input type="search" id="search" spellcheck="true">
+
+            </td>
+        </tr>
+        <!-- submit -->
+        <tr>
+            <td>
+                    <input type="submit" value="submit button">
+            </td>
+        </tr>
+        <!-- tel -->
+        <tr>
+            <td>
+                    <label for="phone">Enter your phone number:</label>
+
+                    <input type="tel" id="phone" name="phone"
+                           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                           required>
+                    
+                    <small>Format: 123-456-7890</smhttps://www.tutorialspoint.com/html/html_tags_reference.htmall>
+                    
+            </td>
+        </tr>
+        <!-- text -->
+        <tr>
+            <td>
+                    <label for="name">Name (4 to 8 characters):</label>
+
+                    <input type="text" id="name" name="name" required
+                           minlength="4" maxlength="8" size="10">
+                    
+            </td>
+        </tr>
+        <!-- time -->
+        <tr>
+            <td>
+                    <label for="appt">Choose a time for your meeting:</label>
+
+                    <input type="time" id="appt" name="appt"
+                           min="09:00" max="18:00" required>
+                    
+                    <small>Office hours are 9am to 6pm</small>
+                    
+            </td>
+        </tr>
+        <!--  url-->
+        <tr>
+            <td>
+                    <label for="url">Enter an https:// URL:</label>
+
+                    <input type="url" name="url" id="url"
+                           placeholder="https://example.com"
+                           pattern="https://.*" size="30"
+                           required>
+                    
+                    
+            </td>
+        </tr>
+        <!-- week -->
+        <tr>
+            <td>
+                    <label for="week">Choose a week in May or June:</label>
+
+                    <input type="week" name="week" id="camp-week"
+                           min="2018-W18" max="2018-W26" required>
+                    
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

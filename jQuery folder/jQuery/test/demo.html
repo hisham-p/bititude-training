@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>removeAttr demo</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+ 
+<button>Change title</button>
+<input type="text" value="hai">
+<div id="log"></div>
+ 
+<script>
+(function() {
+  var inputTitle = $( "input" ).attr( "value" );
+  $( "button" ).click(function() {
+    var input = $( this ).next();
+ 
+    if ( input.attr( "value" ) === inputTitle ) {
+      input.removeAttr( "value" )
+    } else {
+      input.attr( "value", inputTitle );
+    }
+ 
+    $( "#log" ).html( "input title is now " + input.attr( "value" ) );
+  });
+})();
+</script>
+ 
+</body>
+</html>
