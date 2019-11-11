@@ -1,0 +1,19 @@
+.navbar {
+  background-color: white;
+}
+
+#section1 li {
+  list-style-type: none;
+}
+
+#section2 li{
+    list-style-type: none;
+}
+li img {
+    width: 36px;
+    height: 53px;
+}
+button{
+    background-color: transparent;
+    border: none;
+}
