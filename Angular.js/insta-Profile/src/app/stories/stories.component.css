@@ -1,0 +1,10 @@
+img{
+    display: inline-block;
+    width: 100px;
+    height: 60px;
+}
+.stories{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}

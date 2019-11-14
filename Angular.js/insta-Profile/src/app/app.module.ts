@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { InlineSVGModule } from 'ng-inline-svg';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
     InstapostComponent,
     ProfileComponent,
     NavbarComponent,
-    ProfileDetailsComponent
+    ProfileDetailsComponent,
+    MessageComponent,
   ],
   imports: [
     BrowserModule,
