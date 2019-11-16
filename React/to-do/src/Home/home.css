@@ -1,0 +1,15 @@
+h1{
+    color: blue;
+}
+.container{
+    padding: 2rem;
+}
+.input{
+    height: 50px;
+}
+::placeholder{
+    text-align: center;
+}
+li{
+    list-style-type: none;
+}
