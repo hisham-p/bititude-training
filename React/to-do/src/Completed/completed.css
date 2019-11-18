@@ -1,0 +1,6 @@
+#completed{
+    text-decoration: line-through;
+}
+.completedTasks{
+    word-break: break-all;
+}

@@ -1,16 +1,40 @@
-import React from 'react';
+import React, {Component} from 'react';
+import './task.css'
 
-const Tasks = (props) => {
-    const style = {
-        // border: '2px solid black'
+class Tasks extends Component {
+    constructor(props) {
+        super(props);
     }
-    return (
+    state = {
+        disabled: true
+    }
+    toggleClassHandler = () => {
+        const doesShow = this.state.disabled;
+        this.setState({
+            disabled: !doesShow
+        });
+    }
 
-        <li style={style} className="task d-flex flex-row justify-content-between">
-            {props.todo}
-            <button className="btn btn-light" onClick={() => props.delete(props.todo)}>remove</button>
-        </li>
+    render() {
 
-    );
+        return (
+            <li
+                className="task d-flex flex-row justify-content-between list-group-item "
+                onDoubleClick={this.toggleClassHandler}>
+                <input
+                    type="text"
+                    placeholder={this.props.todo}
+                    className="border-0 w-100 bg-transparent todovalue "
+                    disabled={this.state.disabled}
+                    onKeyDown={(e) => (e.keyCode === 13)
+                    ? this.props.update(e.target.value, this.props.todo)
+                    : null}/>
+                <button
+                    className="btn btn-link h-100"
+                    onClick={() => this.props.delete(this.props.todo)}>remove</button>
+            </li>
+
+        );
+    }
 }
 export default Tasks;

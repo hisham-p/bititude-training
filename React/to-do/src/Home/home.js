@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './home.css';
 import Tasks from '../Task/tasks'
 import Completed from '../Completed/completed';
+// import { string } from 'postcss-selector-parser';
 class Home extends Component {
     state = {
         task: [],
@@ -26,12 +27,35 @@ class Home extends Component {
         // let todoarr = this.state.task;
         let todoarr = [...this.state.task];
         let index = todoarr.indexOf(value);
-        this.state.completed.push(value);
+        this
+            .state
+            .completed
+            .push(value);
         todoarr.splice(index, 1);
         this.setState({task: todoarr});
         // console.log("Before : " + todoarr); console.log("Index No to delete: " +
         // index); console.log("Deleted element : " + todoarr[index]);
         // console.log("After : " + todoarr);
+    }
+
+    onUpdate = (value, oldvalue) => {
+        console.log("updated : " + value);
+        console.log("old value : " + oldvalue);
+        if (value.length !== 0) {
+            let updatedArr = [...this.state.task];
+            let index = updatedArr.indexOf(oldvalue);
+            console.log(index);
+            updatedArr.splice(index, 1, value);
+            this.setState({task: updatedArr})
+        } else if (value.length === 0) {
+            return alert("enter a valid value")
+        }
+    }
+
+    clearAll = () => {
+        let completedArr = [...this.state.completed];
+        completedArr.splice(0, completedArr.length);
+        this.setState({completed: completedArr})
     }
 
     render() {
@@ -43,38 +67,27 @@ class Home extends Component {
                     .map(tasks => {
                         // console.log(tasks);
 
-                        return <Tasks todo={tasks} delete={this.onRemove} key={tasks}/>
+                        return <Tasks todo={tasks} delete={this.onRemove} update={this.onUpdate}/>
                     })
 }
             </div>
         );
 
-        // let complete = (
-        //     <div>
-        //         {this
-        //             .state
-        //             .completed
-        //             .map(complete => <Completed tasks={complete}/>)}
-        //     </div>
-        // );
-
-        // let array = ();
+        // let complete = (     <div>         {this             .state .completed
+        // .map(complete => <Completed tasks={complete}/>)} </div> ); let array = ();
         return (
-            <div className="container jumbotron ">
+            <div className="container">
                 <h1>todos</h1>
                 <input
                     type="text"
                     onKeyPress={this.onSubmit}
                     className="input form-control w-100 mb-4"
                     placeholder="Enter the tasks here"/>
-                <ol>
+                <ol className="list-group">
                     {todos}
                 </ol>
-                <div className="my-5">  
-                    {/* {complete} */}
-                </div>
-                {/* <Tasks/> */}
-                <Completed complete={this.state.completed}/>
+                <div className="my-5"></div>
+                <Completed complete={this.state.completed} clearTasks={this.clearAll}/>
             </div>
         );
     }
