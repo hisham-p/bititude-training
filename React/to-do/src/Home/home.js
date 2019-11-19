@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './home.css';
 import Tasks from '../Task/tasks'
 import Completed from '../Completed/completed';
-// import { string } from 'postcss-selector-parser';
+
 class Home extends Component {
     state = {
         task: [],
@@ -10,7 +10,6 @@ class Home extends Component {
     }
 
     onSubmit = (e) => {
-
         if (e.key === 'Enter') {
             // console.log(e.target.value);
             let task = e.target.value;
@@ -39,17 +38,19 @@ class Home extends Component {
     }
 
     onUpdate = (value, oldvalue) => {
-        console.log("updated : " + value);
-        console.log("old value : " + oldvalue);
-        if (value.length !== 0) {
-            let updatedArr = [...this.state.task];
-            let index = updatedArr.indexOf(oldvalue);
-            console.log(index);
-            updatedArr.splice(index, 1, value);
-            this.setState({task: updatedArr})
-        } else if (value.length === 0) {
-            return alert("enter a valid value")
-        }
+        // console.log('---------------') console.log("updated : " + value);
+        // console.log("old value : " + oldvalue); if (value.length !== 0) {
+        let updatedArr = [...this.state.task];
+        // console.log("Main array  : ", this.state.task);
+        let index = updatedArr.indexOf(oldvalue);
+        // console.log(index);
+        updatedArr.splice(index, 1, value);
+        console.log("Updated array : " + updatedArr);
+
+        this.setState({task: updatedArr});
+
+        // console.log("Main array  : " + this.state.task);
+        // } else if (value.length === 0) { return alert("enter a valid value") }
     }
 
     clearAll = () => {
@@ -73,6 +74,9 @@ class Home extends Component {
             </div>
         );
 
+        console.log("Main :" +this.state.task);
+        
+
         // let complete = (     <div>         {this             .state .completed
         // .map(complete => <Completed tasks={complete}/>)} </div> ); let array = ();
         return (
@@ -81,7 +85,7 @@ class Home extends Component {
                 <input
                     type="text"
                     onKeyPress={this.onSubmit}
-                    className="input form-control w-100 mb-4"
+                    className={"input form-control w-100 mb-4"}
                     placeholder="Enter the tasks here"/>
                 <ol className="list-group">
                     {todos}

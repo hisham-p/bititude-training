@@ -1,6 +1,12 @@
 import React, {Component} from 'react';
 import './App.css';
 import Person from './Person/Person';
+// import styled from 'styled-components' import Radium from 'radium';
+//  const StyledButton = styled.button ` background-color: ${props => props.alt ? 'red'
+// : 'green'}             font: inherit;             color: white; border: 1px
+// solid blue;             padding: 8px;             cursor: pointer;  &:hover {
+//                 background-color: white;           color: ${props =>
+// props.alt ? 'red' : 'green'}             }      `;
 
 class App extends Component {
     state = {
@@ -75,13 +81,10 @@ class App extends Component {
 
     render() {
 
-        const style = {
-            backgroundColor: 'white',
-            font: 'inherit',
-            border: '1px solid blue',
-            padding: '8px',
-            cursor: 'pointer'
-        };
+        // const style = {     backgroundColor: 'green',     font: 'inherit',     color:
+        // 'white',     border: '1px solid blue',     padding: '8px',     cursor:
+        // 'pointer',     ':hover': {         backgroundColor: 'white',         color:
+        // 'green'     } };
 
         let persons = null;
 
@@ -105,6 +108,8 @@ class App extends Component {
 }
                 </div>
             );
+            // style.backgroundColor = 'red'; style[':hover'] = {     backgroundColor:
+            // 'white',     color: 'red' }
         }
 
         return (
@@ -112,8 +117,9 @@ class App extends Component {
                 <h1>Hi, I'm a React App</h1>
                 <p>This is really working!</p>
 
-                <button style={style} onClick={this.togglePersonHandler}>Toggle Persons</button>
+                {/* <StyledButton alt={this.state.showPersons} onClick={this.togglePersonHandler}>Toggle Persons</StyledButton> */}
 
+                <button className="button" onClick={this.togglePersonHandler}>Toggle Persons</button>
                 {persons}
             </div>
         );

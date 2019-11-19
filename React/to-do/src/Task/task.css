@@ -1,4 +1,4 @@
-.todovalue::placeholder {
+#todovalue::placeholder {
     text-align: start;
     word-break: break-all;
 }
