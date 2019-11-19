@@ -13,6 +13,7 @@ const Tasks = (props) => {
             <input
                 type="text"
                 readOnly={state}
+                // Use Two way binding method to set values to input fields
                 placeholder={props.todo}
                 className="border-0 w-100 bg-transparent todovalue "
                 onDoubleClick={toggleInput}

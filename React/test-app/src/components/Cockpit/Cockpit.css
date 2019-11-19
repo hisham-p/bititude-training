@@ -1,8 +1,5 @@
-.App {
-    text-align: center;
-}
 
-.button {
+button {
     background-color: green;
     font: inherit;
     color: white;
@@ -10,7 +7,7 @@
     padding: 8px;
     cursor: pointer;
 }
-.button:hover {
+button:hover {
     background-color: white;
     color: green;
 }

@@ -2,8 +2,7 @@ import React from 'react'
 // import './Person.css'
 import styled from 'styled-components'
 
-
-const StyledDiv =styled.div`width: 60%;
+const StyledDiv = styled.div `width: 60%;
 margin: 16px auto;
 border: 1px solid #eee;
 box-shadow: 0 2px 3px #ccc;
@@ -12,8 +11,7 @@ text-align: center;`;
 
 const person = (props) => {
     return (
-        <StyledDiv>  
-        
+        <StyledDiv>
             <p onClick={props.click}>I am a {props.name}
                 and I am {props.age}
                 years old!</p>
