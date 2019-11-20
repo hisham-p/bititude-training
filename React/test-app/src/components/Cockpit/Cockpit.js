@@ -2,21 +2,23 @@ import React from 'react';
 import styled from 'styled-components'
 import './Cockpit.css'
 
-const Cockpit = (props) => {
-    const StyledButton = styled.button ` background-color: ${props => props.alt
+const StyledButton = styled.button ` background-color: ${props => props.alt
+    ? 'red'
+    : 'green'}             
+font: inherit;             
+color: white;
+border: 1px solid blue;             
+padding: 8px;             
+cursor:pointer;
+&:hover {   
+         background-color: white;
+        color:${props => props.alt
         ? 'red'
         : 'green'}             
-    font: inherit;             
-    color: white;
-    border: 1px solid blue;             
-    padding: 8px;             
-    cursor:pointer;
-    &:hover {   
-             background-color: white;
-            color:${propis => propis.alt
-            ? 'red'
-            : 'green'}             
-    }`;
+}`;
+
+const Cockpit = (props) => {
+
     return (
         <div>
             <h1>Hi, I'm a React App</h1>
