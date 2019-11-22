@@ -57,6 +57,10 @@ class Home extends Component {
 }
             </div>
         );
+        let completed =null;
+        if (this.state.completed.length > 0) {
+            completed = <Completed complete={this.state.completed} clearTasks={this.clearAll}/>;
+        }
 
         return (
             <div className="container jumbotron">
@@ -69,8 +73,7 @@ class Home extends Component {
                 <ol className="list-group">
                     {todos}
                 </ol>
-                <div className="my-5"></div>
-                <Completed complete={this.state.completed} clearTasks={this.clearAll}/>
+                {completed}
             </div>
         );
     }
