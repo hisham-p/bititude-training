@@ -1,31 +1,50 @@
-import React, {useState} from 'react';
+import React, {Component} from 'react';
 import './task.css'
 
-const Tasks = (props) => {
-    const [state,
-        setstate] = useState(true);
-    let toggleInput = () => {
-        const doesShow = state;
-        setstate(!doesShow);
+class Tasks extends Component {
+    // eslint-disable-next-line
+    constructor(props) {
+        super(props);
     }
-    return (
-        <li className="task d-flex flex-row justify-content-between list-group-item ">
-            <input
+    state = {
+        disabled: true
+    }
+
+    render() {
+        let todo =null;
+            if(this.state.disabled){
+                todo = <label className="task" onDoubleClick={()=>{
+                    this.setState({disabled : false})
+                }}>{this.props.todo}</label>;     
+            }
+            else{
+                todo = <input
                 type="text"
-                readOnly={state}
-                // Use Two way binding method to set values to input fields
-                placeholder={props.todo}
-                className="border-0 w-100 bg-transparent todovalue "
-                onDoubleClick={toggleInput}
+                className="w-100 todovalue "
+                onChange={(e)=> this.props.update(e.target.value , this.props.todo)}
+                value={this.props.todo}
                 onKeyDown={(e) => {
                 if (e.keyCode === 13) {
-                    props.update(e.target.value, props.todo);
+                    this
+                        .props
+                        .update(e.target.value, this.props.todo);
+                    this.setState({disabled: true});
+                    e.target.value = '';
                 }
-            }}/>
-            <button className="btn btn-link h-100" onClick={() => props.delete(props.todo)}>remove</button>
-        </li>
+            }}/>;
 
-    );
+            }
+
+        return (
+            <li className="task d-flex flex-row justify-content-between list-group-item ">
+                {todo}
+                <button
+                    className="btn btn-link h-100"
+                    onClick={() => this.props.delete(this.props.todo)}>remove</button>
+            </li>
+
+        );
+    }
 }
 
 export default Tasks;

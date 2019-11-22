@@ -2,3 +2,6 @@
     text-align: start;
     word-break: break-all;
 }
+label.task{
+    word-break: break-all
+}
