@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './home.css';
-import Tasks from '../Task/tasks'
+import Tasks from '../Task/task'
 import Completed from '../Completed/completed';
 
 class Home extends Component {
@@ -57,18 +57,18 @@ class Home extends Component {
 }
             </div>
         );
-        let completed =null;
+        let completed = null;
         if (this.state.completed.length > 0) {
             completed = <Completed complete={this.state.completed} clearTasks={this.clearAll}/>;
         }
 
         return (
-            <div className="container jumbotron">
+            <div className="container jumbotron mt-5">
                 <h1>todos</h1>
                 <input
                     type="text"
                     onKeyPress={this.onSubmit}
-                    className={"input form-control w-100 mb-4"}
+                    className="input form-control w-100 mb-4"
                     placeholder="Enter the tasks here"/>
                 <ol className="list-group">
                     {todos}
