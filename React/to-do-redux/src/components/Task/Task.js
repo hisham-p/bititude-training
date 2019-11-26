@@ -1,34 +1,38 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class task extends Component {
-    // eslint-disable-next-line no-useless-constructor
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return (
-            <React.Fragment>
-                <li className="list-group-item input-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text bg-transparent border-0">
-                            <input type="checkbox" aria-label="Checkbox for following text input"/>
+const task = (props) => {
+    let tasks = props
+        .values
+        .map(task => {
+            return (
+                <li key={Math.random * 10000000} className="list-group-item input-group">
+                    <div className="input-group justify-content-between align-items-center">
+                        <div className="input-group-prepend">
+                            <div className="input-group-text bg-transparent border-0">
+                                <input type="checkbox" aria-label="Checkbox for following text input"/>
                             </div>
                         </div>
-                        <input
+                        <label>{task}</label>
+                        {/* <input
                             type="text"
-                            class="form-control border-0"
-                            aria-label="Amount (to the nearest dollar)"/>
-                        <div class="input-group-append">
-                            <div class="input-group-text bg-transparent border-0">
-                                <button className="btn btn-link">remove</button>
+                            value={task}
+                            className="form-control border-0"
+                            aria-label="Amount (to the nearest dollar)"/> */}
+                        <div className="input-group-append">
+                            <div className="input-group-text bg-transparent border-0">
+                                <button className="btn btn-link" onClick={() => props.remove(task)}>delete</button>
                             </div>
                         </div>
                     </div>
                 </li>
-            </React.Fragment>
-        );
-    }
+            );
+        })
+
+    return (
+        <React.Fragment>
+            {tasks}
+        </React.Fragment>
+    );
 }
 
 export default task;

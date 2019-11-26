@@ -1,33 +1,33 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class home extends Component {
-    render() {
-        let render = (
-            <React.Fragment>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text bg-transparent border-0">
-                                <input type="checkbox" aria-label="Checkbox for following text input"/>
+const home = (props)=>{
+        let tasks = props
+            .values
+            .map(task => {
+                return (
+                    <li key={Math.random} className="list-group-item input-group">
+                        <div class="input-group justify-content-around align-items-center">
+                            {/* <div class="input-group-prepend">
+                                <div class="input-group-text bg-transparent border-0">
+                                    <input type="checkbox" aria-label="Checkbox for following text input"/>
+                                </div>
+                            </div> */}
+                            <label style={{textDecoration :'line-through'}}>{task}</label>
+                            <div class="input-group-append">
+                                <div class="input-group-text bg-transparent border-0">
+                                <button className="btn btn-link" onClick={() => props.remove(task)}>delete</button>
+                                </div>
                             </div>
                         </div>
-                        <input
-                            type="text"
-                            class="form-control border-0"
-                            aria-label="Amount (to the nearest dollar)"/>
-                        <div class="input-group-append">
-                            <div class="input-group-text bg-transparent border-0">
-                                <button className="btn btn-link">remove</button>
-                            </div>
-                        </div>
-                    </div>
-            </React.Fragment>
-        );
+                    </li>
+                );
+            })
         return (
-            <li className="list-group-item input-group">
-                {render}
-            </li>
-        );
+            <React.Fragment>
+                {tasks}
+            </React.Fragment>
+            );
     }
-}
+
 
 export default home;

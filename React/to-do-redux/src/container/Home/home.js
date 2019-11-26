@@ -1,27 +1,28 @@
-import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
-import Tasks from '../../components/Task/Task';
+import React from 'react';
+import { Route, Link ,Redirect} from 'react-router-dom';
+import { connect } from 'react-redux';
+// import Tasks from '../../components/Task/Task'
+// import PropTypes from 'prop-types'
+import TaskControl from '../../components/TaskControl/taskControl';
 import Completed from '../../components/Completed/completed';
-import * as actionTypes from '../../store/action'
+import * as actionTypes from '../../store/actions/actionTypes'
 import './home.css'
 
-class home extends Component {
-    onSubmit = (e) => { 
-        // if(e.key === 'Enter'){
-            let value = e.target.value
-            console.log(value);
-            // e.target.value = '';
-            return value;
-        // }
-    }
-    render() {
-
+const home=({
+    onInsert,
+    onRemove,
+    tasks,
+    completed,
+    onCombined,
+    onClearAll,
+    onRemoveCompleted}) =>{
+        console.log('PROPS: ', onCombined);
         return (
             <div className="m-5" style={{}}>
                 <div>
                     <h1 style={{
                         fontSize: '4rem'
-                    }}>Todos</h1>
+                    }}>Redux-Test</h1>
                 </div>
                 <ul className="list-group">
 
@@ -37,56 +38,67 @@ class home extends Component {
                                     width: '100%'
                                 }}>v</button>
                         </div>
-                        <form>
+
                         <input
                             type="text"
                             className="todo"
-                            onSubmit={this.props.onInsert}
+                            onKeyPress={e =>
+                                 e.key === 'Enter' 
+                                 ? (onInsert(e.target.value), e.target.value='') 
+                                 : null}
                             style={{
                                 width: '90%'
                             }}
                             placeholder="What's needs to be done"
-                             />
-                        </form>
+                        />
+
                     </li>
-                    <Route path='/' />
-                    <Route path="/tasks" component={Tasks} />
-                    <Route path="/completed" component={Completed} />
+                    <Redirect from='/' to='/tasks'/>
+                    {/* <Route path='/all' render={()=><Tasks key={Math.random * 1500} values={onCombined }/>}/> */}
+                    <Route path="/tasks" render={()=><TaskControl values={tasks} remove={onRemove}/>} />
+                    <Route path="/completed" render={()=> <Completed values={completed} remove={onRemoveCompleted}/>} />  
                     <li className="list-group-item">
                         <div className="d-flex flex-row align-items-center justify-content-between">
-                            <label>1 item left</label>
+                            <label>{tasks.length === 0 ? 0 + " items" : tasks.length + " items left"}</label>
                             <nav className="navbar">
 
                                 {/* All tasks including completed one's*/}
-                                <Link to="/" className='btn' >All</Link>
+                                {/* <Link to="/all" className='btn'>All</Link> */}
 
                                 {/* entered tasks which are not deleted */}
-                                <Link to="/tasks" className='btn' >Active</Link>
+                                <Link to="/tasks" className='btn'  >Active</Link>
 
                                 {/* deleted tasks */}
-                                <Link to="/completed" className='btn' >Completed</Link>
+                                <Link to="/completed" className='btn'>Completed</Link>
 
                                 {/* Clear the completed tasks from completed array */}
-                                <Link className="btn" >Clear Completed</Link>
+                                {/* <button onClick={onClearAll} className="btn" >Clear Completed</button> */}
                             </nav>
                         </div>
                     </li>
                 </ul>
             </div >
         );
-    }
+    
 }
 const mapStateToProps = state => {
-    return { tasks: state.tasks };
+    // console.log(state);
+    return { tasks: state.tasks , completed  :state.completed , combined :state.combined};
 };
 const mapDispatchToProps = dispatch => {
     return {
-        onInsert: () => {
-            let value = this.onSubmit();
-            console.log(value);
-            dispatch({ type: actionTypes.INSERT })}
+        onInsert: (value) => {
+            if(value.length === 0)
+            alert("enter a valid value");
+            else
+            dispatch({ type: actionTypes.INSERT , value :value })
+        },
+        onRemove : (value)=> dispatch({type : actionTypes.DELETE , value : value}),
+        onRemoveCompleted : (value) => dispatch({type :actionTypes.DELETE_COMPLETED ,value : value}),
+        onClearAll :()=> dispatch({type : actionTypes.CLEARALL}),
+        onCombined : ()=> dispatch({type : actionTypes.SHOW_ALL})
     };
 };
 
 
-export default home;
+export default connect(mapStateToProps, mapDispatchToProps)(home);

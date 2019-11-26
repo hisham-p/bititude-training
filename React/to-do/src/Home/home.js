@@ -14,8 +14,7 @@ class Home extends Component {
             let task = e.target.value;
             let arr = this.state.task;
             arr.push(task);
-            this.setState({task: arr})
-            e.target.value = '';
+            this.setState({task: arr})e.target.value = '';
         }
 
     };
