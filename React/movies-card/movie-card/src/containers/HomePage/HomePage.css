@@ -1,0 +1,12 @@
+.navbar{
+    color: white;
+}
+.navbar li{
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+}
+.img{
+    height : 500px
+}
