@@ -1,0 +1,185 @@
+{
+    "_id" : ObjectId("5dddfdd29f784992fec68d1b"),
+    "m_id" : 1,
+    "industry" : "Hollywood",
+    "title" : "John Wick",
+    "cast" : "Keenu Reevees",
+    "imgmovie" : "https://imgc.allpostersimages.com/img/print/u-g-F7SH250.jpg?w=550&h=550&p=0",
+    "description" : "The story focuses on John Wick (Reeves), searching for the men who broke into his home, stole his vintage car and killed his puppy, which were a last gift to him from his recently deceased wife (Moynahan).Stahelski and David Leitch directed the film together, though only Stahelski was credited"
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5dddff599f784992fec68d7c"),
+    "m_id" : 2,
+    "industry" : "Hollywood",
+    "title" : "Harry Potter and Sorcerer's Stone",
+    "cast" : "Daniel Radicliff",
+    "imgmovie" : "https://image.tmdb.org/t/p//w780//bqOXkBYi3jy2mD6Yi0ZzrOadzF6.jpg",
+    "description" : "Journey of a young wizard starts who is destined to a legend"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5dddffdf9f784992fec68d9b"),
+    "m_id" : 3,
+    "industry" : "Hollywood",
+    "title" : "Harry Potter and Chamber Of Secrets",
+    "cast" : "Daniel Radicliff , Emma Watson",
+    "imgmovie" : "https://img01.mgo-images.com/image/thumbnail/v2/content/1MVde18c7b6be121717c1f42d88f4e94cc9.jpeg",
+    "description" : "Harry to find the secrets of the orgin of lord voldomort"
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("5dde00389f784992fec68dae"),
+    "m_id" : 4,
+    "industry" : "Hollywood",
+    "title" : "Harry Potter and Prisoner of Azkaban",
+    "cast" : "Daniel Radicliff , Emma Watson",
+    "imgmovie" : "https://images-na.ssl-images-amazon.com/images/I/A12o-S9zoFL._SY445_.jpg",
+    "description" : "Harry to find the truth how his parents are killed and the peoples behind it"
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("5dde22a49f784992fec69407"),
+    "m_id" : 5,
+    "industry" : "Hollywood",
+    "title" : "Intersteller",
+    "cast" : "Matthew McConaughey , Anne Hathaway",
+    "imgmovie" : "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+    "description" : "A journey through new Dimension"
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("5dde27439f784992fec69506"),
+    "m_id" : 6,
+    "industry" : "Hollywood",
+    "title" : "Shutter Island",
+    "cast" : "Leonardo Di Caprio",
+    "imgmovie" : "https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+    "description" : "A journey through the life of a mental person"
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("5dde27fa9f784992fec6952c"),
+    "m_id" : 7,
+    "industry" : "Hollywood",
+    "title" : "Avatar",
+    "cast" : "Sam Worthington , Zoe Saldana",
+    "imgmovie" : "http://www.gstatic.com/tv/thumb/v22vodart/3542039/p3542039_v_v8_ac.jpg",
+    "description" : "Life in another planet"
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("5dde29459f784992fec6956a"),
+    "m_id" : 8,
+    "industry" : "Hollywood",
+    "title" : "Avengers",
+    "cast" : "Robert Downy Jr , Chris Hemworth, Scarlett Johansson",
+    "imgmovie" : "http://www.movienewsletters.net/photos/130835R1.jpg",
+    "description" : "A world of super heros"
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("5ddfa43e7eb43a2918ef41d8"),
+    "m_id" : 9,
+    "industry" : "Mollywood",
+    "title" : "Helen",
+    "cast" : "Anna Ben,Lal,Noble Babu Thomas",
+    "imgmovie" : "https://upload.wikimedia.org/wikipedia/en/1/1a/Helen_film_poster.jpg",
+    "description" : "Helen (Anna Ben) is a nurse, who wants to find a job in Canada. She attends IELTS coaching classes and then works in a restaurant named Chicken Hub, inside a plush mall. She lives with her father, an insurance agent Paul (Lal). He doesn’t like her daughter going abroad as he is really close to her. She is in love with a boy Azhar (Noble Babu Thomas), who is in the search for a job.There is an incident involving a moody sub inspector Ratheesh Kumar (Aju Varghese) and the issues that lead to soon after, which adds to the pace of the narrative."
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("5ddfa52b7eb43a2918ef4208"),
+    "m_id" : 10,
+    "industry" : "Mollywood",
+    "title" : "Jack Daniel",
+    "cast" : "Dileep , Arjun",
+    "imgmovie" : "http://onlookersmedia.in/wp-content/uploads/2019/07/first-look-poster-dileep-arjun-starrer-jack-daniel-2.jpg",
+    "description" : "Jack is a businessman by day and he moonlights as a burglar who steals black money from the high ranks of bureaucracy. Daniel Alexander, an incorruptible police officer, is deputed to nab him. The film is one chasing the other.Dileep has played enough thieves in and as Meesa Madhavan, Gopi in Vettam and numerous other characters for us to see him play similiar characters."
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("5ddfa5fe7eb43a2918ef5985"),
+    "m_id" : 11,
+    "industry" : "Mollywood",
+    "title" : "Android Kunjappan v5.25",
+    "cast" : "Soubin , Suraj",
+    "imgmovie" : "https://m.media-amazon.com/images/M/MV5BNmMwMzc0OWMtMzk0ZC00Y2VkLThmZWMtNzE3NjRlZWJhYmQ5XkEyXkFqcGdeQXVyMzQ5Njc3NzU@._V1_.jpg",
+    "description" : "The movie tells the story of AI engineer Subrahmanya “Subbu” Poduval (Soubin Shahir) and his father Bhaskara Poduval (Suraj Venjaramoodu). The very elderly Poduval wants his son to find work somewhere close to home. But 34-year-old Subbu has already given up many well-paying offers and is tired of being under his father’s thumb."
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("5ddfa6ed7eb43a2918ef7e9c"),
+    "m_id" : 12,
+    "industry" : "Mollywood",
+    "title" : "Moothon",
+    "cast" : "Nivin Pauly",
+    "imgmovie" : "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Moothon_film_poster.jpg/220px-Moothon_film_poster.jpg",
+    "description" : "The movie tells the story of AI engineer Subrahmanya “Subbu” Poduval (Soubin Shahir) and his father Bhaskara Poduval (Suraj Venjaramoodu). The very elderly Poduval wants his son to find work somewhere close to home. But 34-year-old Subbu has already given up many well-paying offers and is tired of being under his father’s thumb.‘Moothon’, the person, in these initial parts is a myth, for Mulla, as well as the audience. The reasons for his brother leaving the island is known to him only through rumours, as to something to do with a broken heart. He has almost forgotten the elder one's face. Even the photographs he have of him are unclear. About his life in Mumbai too, Mulla has heard only rumours. Mulla asks his uncle and current guardian Moosa (Dileesh Pothan) - 'Are these stories about him true?'. At this point, we are not told about what he has heard."
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("5ddfa7b07eb43a2918efa2c9"),
+    "m_id" : 13,
+    "industry" : "Mollywood",
+    "title" : "Unda",
+    "cast" : "Mammootty",
+    "imgmovie" : "https://valleyevents.ca/images/poster/cache/70759.detail.jpg",
+    "description" : "The film tells the story of a nine-man police unit from Kerala led by Sub-inspector Manikandan C. P. (Mammootty), who travel for an other state election duty in a Maoist prone area in Chhattisgarh. Deceived by the calm and quiet on their first day, they were just starting to let their hair down when the shoot out the next day made them aware of the dangers they were about to face. In their initial rush of excitement, they fired all of the very limited number of bullets they had brought with them. To conduct the elections peacefully with only eight bullets left becomes a humongous task ahead of them."
+}
+
+/* 14 */
+{
+    "_id" : ObjectId("5ddfbaf17eb43a2918f49273"),
+    "m_id" : 14,
+    "industry" : "Tollywood",
+    "title" : "Kaithi",
+    "cast" : "Karthi",
+    "imgmovie" : "https://in.bmscdn.com/iedb/movies/images/mobile/thumbnail/large/kaithi-et00098319-08-03-2019-05-13-44.jpg",
+    "description" : "A smuggling van carrying a ton of drugs and a group of smugglers are captured by Inspector Bejoy and his team. The drugs belong to Adaikalam, none of the police officers have seen him nor don't they know how he looks. Adaikalam's brother Anbu plans to capture the police inspectors and kill them, take their drugs back from them. According to the Anbu's plan, all of the police officers get high and unconscious after consuming poisoned drinks at a higher official's retirement party. Bejoy, who avoided the drinks as he was under medication, escapes from the cruel plan and tries to save the lives of all the unconscious officials without letting the media or anyone else from the outside finding out, so he convinces Dilli, an ex-prisoner who happened to be there with him as he was detained for looking suspicious, to help him save the officers' lives by promising him that he will help Dilli meet his daughter for the first time the next morning. With the help of a truck borrowed from Kamatchi, who is a caterer at the higher official's mansion."
+}
+
+/* 15 */
+{
+    "_id" : ObjectId("5ddfbb497eb43a2918f4a405"),
+    "m_id" : 15,
+    "industry" : "Tollywood",
+    "title" : "Bigil",
+    "cast" : "Vijay",
+    "imgmovie" : "https://upload.wikimedia.org/wikipedia/en/f/f0/Bigil_poster.jpg",
+    "description" : "Michael Rayappan is a rowdy working for public welfare in a Chennai slum. His friend Kathir, the coach of the Tamil Nadu women's football team, gets attacked by goons while driving home. Michael fights them off but realizes his archenemy Daniel has stabbed Kathir, leading to spinal injuries that prevent him from accompanying the team. The team blames Michael for his condition, while Kathir tells a member of the federation to replace him with a former footballer named 'Bigil' who is none other than Michael."
+}
+
+/* 16 */
+{
+    "_id" : ObjectId("5ddfbb9f7eb43a2918f4b1a1"),
+    "m_id" : 16,
+    "industry" : "Tollywood",
+    "title" : "Action",
+    "cast" : "Vishal ,Tamanna",
+    "imgmovie" : "https://upload.wikimedia.org/wikipedia/en/a/a4/Action_Tamil_Film.jpg",
+    "description" : "Colonel Subhash (Vishal Krishna) and Diya (Tamannaah), who are Indian army officers, are on a mission to catch a mastermind behind a terror attack that took away Subhash's brother (Ramki) and his love interest (Aishwarya Lekshmi)."
+}
+
+/* 17 */
+{
+    "_id" : ObjectId("5ddfbc577eb43a2918f4f698"),
+    "m_id" : 17,
+    "industry" : "Tollywood",
+    "title" : "Kadaram Kondan",
+    "cast" : "Vikram",
+    "imgmovie" : "http://t1.gstatic.com/images?q=tbn:ANd9GcQNYkUffpZZqgSutlaIFo11MNu3UZEwPHmyZyHlWrNLwdExxJHC",
+    "description" : "Vasu (Abi Hassan) and Aatirah (Akshara Haasan) begin their life in Malaysia, and as they're expecting their child, enters KK (Vikram) who's needed by a gang, and Vasu is forced to bring out an injured KK from hospital, and gets framed. As cops are on the hunt for KK and Vasu, they realise there are moles within the department as well, and now it's upto KK and Vasu to escape from the threats and rescue Aatirah."
+}

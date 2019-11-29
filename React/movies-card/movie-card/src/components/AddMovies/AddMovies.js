@@ -33,7 +33,7 @@ class addMovies extends Component {
                         <small className="form-text text-muted">Upload image as url</small>
                     </div>
                     <select className="custom-select my-3">
-                        <option disabled selected>-Select the industry-</option>
+                        <option disabled>-Select the industry-</option>
                         <option value="1">Hollywood</option>
                         <option value="2">Bollywood</option>
                         <option value="3">Mollywood</option>
@@ -43,9 +43,13 @@ class addMovies extends Component {
                     <div className="form-group my-3">
                         <label>Cast</label>
                         <input type="text" className="form-control" placeholder="Enter the cast name on by one"/>
+                        <button className="btn btn-primary">Add cast</button>
                     </div>
-
-                    <button type="submit" className="btn btn-primary">Submit Movie</button>
+                    <div className="form-group my-3">
+                        <label>Description</label>
+                        <input type="text" className="form-control" placeholder="Enter the movie description here"/>
+                    </div>
+                    <button type="submit" className="btn btn-success">Submit Movie</button>
                 </form>
             </div>
         );
