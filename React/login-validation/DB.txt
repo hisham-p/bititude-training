@@ -1,0 +1,28 @@
+{
+    "_id" : ObjectId("5de4a520e29cbcbe8916b03f"),
+    "id" : 1,
+    "username" : "hai",
+    "password" : "1234",
+    "email" : "hai@gmail.com",
+    "designation" : "admin"
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5de4a545e29cbcbe8916b04b"),
+    "id" : 2,
+    "username" : "hello",
+    "password" : "1234",
+    "email" : "hello@gmail.com",
+    "designation" : "user"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5de4a562e29cbcbe8916b059"),
+    "id" : 3,
+    "username" : "world",
+    "password" : "1234",
+    "email" : "world@gmail.com",
+    "designation" : "user"
+}

@@ -15,11 +15,22 @@ db.on('error', err => {
 
 //setting up schema
 let Schema = new mongoose.Schema({
-
+    m_id: String,
+    title: String,
+    imgmovie: String,
+    industry: String,
+    cast: String,
+    description: String,
+    language : String
 });
 
 //model creation
 let dbdata = mongoose.model('moviecards', Schema);
+
+
+exports.getAllMovies = async (req,res)=>{
+    res.json(await dbdata.find());
+}
 
 
 exports.sendResponse = async (req, res) => {
@@ -28,17 +39,25 @@ exports.sendResponse = async (req, res) => {
         'industry': industry
     }));
 }
-
+exports.getIndustries = async (jreq, res) => {
+    res.json(await dbdata.find());
+}
 exports.getMovies = async (req, res) => {
     let industry = req.params.industry;
-    let movie = req.params.movie;
+    let movie = req.params.movies;
     console.log(movie);
     res.json(await dbdata.find({
         'industry': industry,
         '_id': movie
     }))
 }
-exports.insertMovies = async(req,res)=>{
-    let data = req.body.data;
+exports.insertMovies = async (req, res) => {
+    let data = req.body;
     console.log(data);
+    await dbdata.create(data, function (error) {
+        console.log("Value inserted");
+        if (error) {
+            console.error(error);
+        }
+    });
 }
